@@ -97,7 +97,7 @@
     
     async function loadPrompts() {
       try {
-        const response = await fetch('prompts.json');
+        const response = await fetch('prompt.json');
         if (!response.ok) throw new Error("Network response was not ok");
         prompts = await response.json();
       } catch (error) {
