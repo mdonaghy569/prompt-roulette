@@ -93,34 +93,42 @@
   </div>
 
   <script>
-    const prompts = [
-      "You're a detective whose cat just learned to talk. What does it say first?",
-      "Write a job interview between a dragon and a princess.",
-      "Invent a new holiday and describe how people celebrate it.",
-      "What's a conspiracy theory that only dogs believe?",
-      "If time stopped for 10 minutes a day, how would people use it?",
-      "You discover a vending machine that gives life advice. What does it say?",
-      "Describe a parallel universe where gravity works sideways.",
-      "A robot wakes up with human emotions. What's the first thing it feels?",
-      "Create a supervillain who is absurd but somehow terrifying.",
-      "If laughter was currency, how would society change?",
-    ];
-
+    let prompts = [];
+    
+    async function loadPrompts() {
+      try {
+        const response = await fetch('prompts.json');
+        if (!response.ok) throw new Error("Network response was not ok");
+        prompts = await response.json();
+      } catch (error) {
+        console.error("Failed to load prompts:", error);
+        prompts = ["Oops! Couldn't load prompts. Try again later."];
+      }
+    }
+    
     function spinPrompt() {
+      if (prompts.length === 0) {
+        document.getElementById("promptBox").innerText = "Loading prompts...";
+        return;
+      }
       const promptBox = document.getElementById("promptBox");
       const randomPrompt = prompts[Math.floor(Math.random() * prompts.length)];
       promptBox.innerHTML = `🧠 “${randomPrompt}”`;
       promptBox.style.animation = 'none';
-      void promptBox.offsetWidth; // Trigger reflow
+      void promptBox.offsetWidth;
       promptBox.style.animation = 'fadeIn 0.5s ease-in-out';
     }
-
+    
     function copyPrompt() {
       const text = document.getElementById("promptBox").innerText;
       navigator.clipboard.writeText(text)
         .then(() => alert("Prompt copied to clipboard!"))
         .catch(() => alert("Failed to copy."));
     }
+    
+    // Load prompts on page load
+    window.onload = loadPrompts;
+
   </script>
 
 </body>
