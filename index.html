@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ChatGPT Prompt Roulette 🎰</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fdf6ec;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: #333;
+    }
+
+    .container {
+      max-width: 600px;
+      margin-top: 2rem;
+      background: #fff3e0;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+
+    button {
+      background-color: #ff9800;
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      border-radius: 12px;
+      cursor: pointer;
+      margin: 1rem;
+      transition: transform 0.2s;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+    }
+
+    .prompt-box {
+      margin-top: 1.5rem;
+      font-style: italic;
+      background: #fff;
+      padding: 1rem;
+      border-radius: 8px;
+      min-height: 80px;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    select {
+      padding: 0.5rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>ChatGPT Prompt Roulette 🎰</h1>
+  <p>Need inspiration? Click the button to get a fun prompt!</p>
+
+  <div class="container">
+    <select id="category">
+      <option value="all">🎯 All Categories</option>
+      <option value="creative">🖋️ Creative</option>
+      <option value="funny">🤣 Funny</option>
+      <option value="deep">🧠 Thought-Provoking</option>
+    </select>
+
+    <button onclick="spinPrompt()">🎲 Spin the Prompt</button>
+
+    <div class="prompt-box" id="promptBox">
+      <em>Click the button to generate your first prompt!</em>
+    </div>
+
+    <button onclick="copyPrompt()">📋 Copy Prompt</button>
+  </div>
+
+  <script>
+    const prompts = [
+      "You're a detective whose cat just learned to talk. What does it say first?",
+      "Write a job interview between a dragon and a princess.",
+      "Invent a new holiday and describe how people celebrate it.",
+      "What's a conspiracy theory that only dogs believe?",
+      "If time stopped for 10 minutes a day, how would people use it?",
+      "You discover a vending machine that gives life advice. What does it say?",
+      "Describe a parallel universe where gravity works sideways.",
+      "A robot wakes up with human emotions. What's the first thing it feels?",
+      "Create a supervillain who is absurd but somehow terrifying.",
+      "If laughter was currency, how would society change?",
+    ];
+
+    function spinPrompt() {
+      const promptBox = document.getElementById("promptBox");
+      const randomPrompt = prompts[Math.floor(Math.random() * prompts.length)];
+      promptBox.innerHTML = `🧠 “${randomPrompt}”`;
+      promptBox.style.animation = 'none';
+      void promptBox.offsetWidth; // Trigger reflow
+      promptBox.style.animation = 'fadeIn 0.5s ease-in-out';
+    }
+
+    function copyPrompt() {
+      const text = document.getElementById("promptBox").innerText;
+      navigator.clipboard.writeText(text)
+        .then(() => alert("Prompt copied to clipboard!"))
+        .catch(() => alert("Failed to copy."));
+    }
+  </script>
+
+</body>
+</html>
