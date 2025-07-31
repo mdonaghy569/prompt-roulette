@@ -1,42 +1,36 @@
-[
-  "You're a detective whose cat just learned to talk. What does it say first?",
-  "Invent a new social media platform that only works on Wednesdays.",
-  "Describe the thoughts of a pizza in the oven.",
-  "If your reflection suddenly moved on its own, what would it try to say?",
-  "Write a motivational speech for a group of procrastinators.",
-  "Imagine an interview with an alien who just discovered coffee.",
-  "Create a superhero who solves emotional conflicts instead of fights.",
-  "Describe a world where people swap dreams like trading cards.",
-  "What's the secret mission of the squirrel outside your window?",
-  "Explain the plot of a movie starring a spoon and a microwave.",
-  "Describe a perfect morning routine that anyone could adopt for a peaceful day.",
-  "Imagine a conversation between your future self and your present self.",
-  "Write a letter to your childhood best friend, telling them what you appreciate most about them.",
-  "What’s a small habit that transformed your productivity or happiness?",
-  "Describe the feeling of coming home after a long day in vivid detail.",
-  "If your emotions were colors, what color would your current mood be and why?",
-  "Explain how technology has changed the way families connect and share memories.",
-  "Write about a moment when a stranger’s kindness made a big difference in your life.",
-  "Imagine a world where everyone takes a daily pause to practice gratitude. How does society change?",
-  "Describe the taste, smell, and texture of your favorite comfort food.",
-  "Tell the story of a walk in your neighborhood that unexpectedly changed your perspective.",
-  "Write about a memory connected to a song that always brings you joy or comfort.",
-  "Imagine how life would be different if humans could communicate only through body language.",
-  "Describe the feeling of finishing a challenging task and why that moment matters.",
-  "Write a journal entry from the perspective of your pet or a local animal you see often.",
-  "How would you spend a day if you had no access to any digital devices?",
-  "Tell the story of the best advice you ever received and how it affected your decisions.",
-  "Describe a ritual or tradition that makes holidays or weekends special in your culture or family.",
-  "Imagine an everyday object (like a coffee mug or a pair of shoes) could tell its story. What would it say?",
-  "Write about a time when you felt truly connected to nature and what you learned from it.",
-  "Explain how you would redesign your favorite public space to make it more welcoming and inclusive.",
-  "Describe the perfect conversation between two strangers on a park bench.",
-  "Write a letter to your future self, giving advice about balancing work and personal life.",
-  "Imagine what your day would look like if you could relive it with a different mindset.",
-  "Describe a habit you want to break and why it’s important to you.",
-  "Tell the story of a community event that brought people together in unexpected ways.",
-  "Write about the feeling of anticipation before something important happens.",
-  "Describe the little things that make your home feel like a sanctuary.",
-  "Imagine a world where people’s dreams are broadcasted publicly. How would society react?",
-  "Write about the significance of a daily ritual that brings you calm or focus."
+prompts = [
+    # Deep
+    ("What's something simple that brings you joy?", "deep"),
+    ("Describe a moment that changed your perspective on life.", "deep"),
+    ("If you had one question answered truthfully, what would it be?", "deep"),
+    ("What does 'home' mean to you?", "deep"),
+    ("Is there such a thing as destiny, or do we create our path?", "deep"),
+
+    # Creative
+    ("Invent a holiday that no one celebrates yet.", "creative"),
+    ("Design a futuristic kitchen tool no one has invented yet.", "creative"),
+    ("Describe a world where water is solid and ice is liquid.", "creative"),
+    ("Write the plot of a movie where animals rule over humans.", "creative"),
+    ("Imagine a plant that can talk. What does it say to you?", "creative"),
+
+    # Funny
+    ("What would chairs look like if our knees bent the other way?", "funny"),
+    ("If pets could text you, what would your dog or cat say?", "funny"),
+    ("Invent a ridiculous Olympic sport and describe how it’s played.", "funny"),
+    ("What’s the weirdest item someone might find in your fridge?", "funny"),
+    ("If your socks had personalities, how would they behave?", "funny"),
+
+    # Everyday
+    ("What’s one small habit that improved your life?", "everyday"),
+    ("How do you usually start your mornings?", "everyday"),
+    ("What’s your go-to comfort food and why?", "everyday"),
+    ("What’s one task you always procrastinate on?", "everyday"),
+    ("Describe your ideal weekend.", "everyday"),
+
+    # Thought-provoking
+    ("If everyone had a visible 'life bar' above their head, how would society change?", "deep"),
+    ("Would you rather live 100 years in the past or 100 years in the future?", "deep"),
+    ("What would happen if humans didn’t need sleep?", "deep"),
+    ("Should we be more afraid of AI or human ignorance?", "deep"),
+    ("Is technology bringing us closer together or pulling us apart?", "deep")
 ]
