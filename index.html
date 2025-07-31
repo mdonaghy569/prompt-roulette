@@ -102,7 +102,9 @@
 
     <button onclick="copyPrompt()">📋 Copy Prompt</button>
   </div>
-
+  
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  
   <script>
     let prompts = [];
     
@@ -117,18 +119,42 @@
       }
     }
     
-    function spinPrompt() {
-      if (prompts.length === 0) {
-        document.getElementById("promptBox").innerText = "Loading prompts...";
-        return;
-      }
-      const promptBox = document.getElementById("promptBox");
-      const randomPrompt = prompts[Math.floor(Math.random() * prompts.length)];
-      promptBox.innerHTML = `🧠 “${randomPrompt}”`;
-      promptBox.style.animation = 'none';
-      void promptBox.offsetWidth;
-      promptBox.style.animation = 'fadeIn 0.5s ease-in-out';
-    }
+function spinPrompt() {
+  if (prompts.length === 0) {
+    document.getElementById("promptBox").innerText = "Loading prompts...";
+    return;
+  }
+
+  const selectedCategory = document.getElementById("category").value;
+  let filteredPrompts = prompts;
+
+  if (selectedCategory !== "all") {
+    filteredPrompts = prompts.filter(p => p.category === selectedCategory);
+  }
+
+  if (filteredPrompts.length === 0) {
+    document.getElementById("promptBox").innerText = "No prompts found for this category.";
+    return;
+  }
+
+  const randomPrompt = filteredPrompts[Math.floor(Math.random() * filteredPrompts.length)].prompt;
+  const promptBox = document.getElementById("promptBox");
+
+  // Set prompt text
+  promptBox.innerHTML = `🧠 “${randomPrompt}”`;
+
+  // Trigger spin animation
+  promptBox.classList.remove("spin-animation");
+  void promptBox.offsetWidth; // trigger reflow to restart animation
+  promptBox.classList.add("spin-animation");
+
+  // Trigger confetti burst
+  confetti({
+    particleCount: 100,
+    spread: 70,
+    origin: { y: 0.6 }
+  });
+}
     
     function copyPrompt() {
       const text = document.getElementById("promptBox").innerText;
