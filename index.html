@@ -92,6 +92,7 @@
       <option value="creative">🖋️ Creative</option>
       <option value="funny">🤣 Funny</option>
       <option value="deep">🧠 Thought-Provoking</option>
+      <option value="everyday">🌅 Everyday</option>
     </select>
 
     <button onclick="spinPrompt()">🎲 Spin the Prompt</button>
@@ -115,7 +116,10 @@
         prompts = await response.json();
       } catch (error) {
         console.error("Failed to load prompts:", error);
-        prompts = ["Oops! Couldn't load prompts. Try again later."];
+        prompts = [{
+          prompt: "Oops! Couldn't load prompts. Try again later.",
+          category: "deep"
+        }];
       }
     }
     
@@ -158,6 +162,10 @@ function spinPrompt() {
     
     function copyPrompt() {
       const text = document.getElementById("promptBox").innerText;
+      if (text.trim() === "") {
+        alert("Prompt is empty. Cannot copy.");
+        return;
+      }
       navigator.clipboard.writeText(text)
         .then(() => alert("Prompt copied to clipboard!"))
         .catch(() => alert("Failed to copy."));

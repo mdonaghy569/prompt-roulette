@@ -1,36 +1,102 @@
-prompts = [
-    # Deep
-    ("What's something simple that brings you joy?", "deep"),
-    ("Describe a moment that changed your perspective on life.", "deep"),
-    ("If you had one question answered truthfully, what would it be?", "deep"),
-    ("What does 'home' mean to you?", "deep"),
-    ("Is there such a thing as destiny, or do we create our path?", "deep"),
-
-    # Creative
-    ("Invent a holiday that no one celebrates yet.", "creative"),
-    ("Design a futuristic kitchen tool no one has invented yet.", "creative"),
-    ("Describe a world where water is solid and ice is liquid.", "creative"),
-    ("Write the plot of a movie where animals rule over humans.", "creative"),
-    ("Imagine a plant that can talk. What does it say to you?", "creative"),
-
-    # Funny
-    ("What would chairs look like if our knees bent the other way?", "funny"),
-    ("If pets could text you, what would your dog or cat say?", "funny"),
-    ("Invent a ridiculous Olympic sport and describe how it’s played.", "funny"),
-    ("What’s the weirdest item someone might find in your fridge?", "funny"),
-    ("If your socks had personalities, how would they behave?", "funny"),
-
-    # Everyday
-    ("What’s one small habit that improved your life?", "everyday"),
-    ("How do you usually start your mornings?", "everyday"),
-    ("What’s your go-to comfort food and why?", "everyday"),
-    ("What’s one task you always procrastinate on?", "everyday"),
-    ("Describe your ideal weekend.", "everyday"),
-
-    # Thought-provoking
-    ("If everyone had a visible 'life bar' above their head, how would society change?", "deep"),
-    ("Would you rather live 100 years in the past or 100 years in the future?", "deep"),
-    ("What would happen if humans didn’t need sleep?", "deep"),
-    ("Should we be more afraid of AI or human ignorance?", "deep"),
-    ("Is technology bringing us closer together or pulling us apart?", "deep")
+[
+  {
+    "prompt": "What's something simple that brings you joy?",
+    "category": "deep"
+  },
+  {
+    "prompt": "Describe a moment that changed your perspective on life.",
+    "category": "deep"
+  },
+  {
+    "prompt": "If you had one question answered truthfully, what would it be?",
+    "category": "deep"
+  },
+  {
+    "prompt": "What does 'home' mean to you?",
+    "category": "deep"
+  },
+  {
+    "prompt": "Is there such a thing as destiny, or do we create our path?",
+    "category": "deep"
+  },
+  {
+    "prompt": "Invent a holiday that no one celebrates yet.",
+    "category": "creative"
+  },
+  {
+    "prompt": "Design a futuristic kitchen tool no one has invented yet.",
+    "category": "creative"
+  },
+  {
+    "prompt": "Describe a world where water is solid and ice is liquid.",
+    "category": "creative"
+  },
+  {
+    "prompt": "Write the plot of a movie where animals rule over humans.",
+    "category": "creative"
+  },
+  {
+    "prompt": "Imagine a plant that can talk. What does it say to you?",
+    "category": "creative"
+  },
+  {
+    "prompt": "What would chairs look like if our knees bent the other way?",
+    "category": "funny"
+  },
+  {
+    "prompt": "If pets could text you, what would your dog or cat say?",
+    "category": "funny"
+  },
+  {
+    "prompt": "Invent a ridiculous Olympic sport and describe how it's played.",
+    "category": "funny"
+  },
+  {
+    "prompt": "What's the weirdest item someone might find in your fridge?",
+    "category": "funny"
+  },
+  {
+    "prompt": "If your socks had personalities, how would they behave?",
+    "category": "funny"
+  },
+  {
+    "prompt": "What's one small habit that improved your life?",
+    "category": "everyday"
+  },
+  {
+    "prompt": "How do you usually start your mornings?",
+    "category": "everyday"
+  },
+  {
+    "prompt": "What's your go-to comfort food and why?",
+    "category": "everyday"
+  },
+  {
+    "prompt": "What's one task you always procrastinate on?",
+    "category": "everyday"
+  },
+  {
+    "prompt": "Describe your ideal weekend.",
+    "category": "everyday"
+  },
+  {
+    "prompt": "If everyone had a visible 'life bar' above their head, how would society change?",
+    "category": "deep"
+  },
+  {
+    "prompt": "Would you rather live 100 years in the past or 100 years in the future?",
+    "category": "deep"
+  },
+  {
+    "prompt": "What would happen if humans didn't need sleep?",
+    "category": "deep"
+  },
+  {
+    "prompt": "Should we be more afraid of AI or human ignorance?",
+    "category": "deep"
+  },
+  {
+    "prompt": "Is technology bringing us closer together or pulling us apart?",
+    "category": "deep"
+  }
 ]
